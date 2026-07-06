@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    /* الصورة في بداية الصفحة */
+    .lesson-image {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    /* صندوق الصوت */
+    .audio-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: inline-block;
+    }
+  </style>
+</head>
+  <meta charset="UTF-8">
+  <title>Lesson Page</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y2SRXTR995"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-Y2SRXTR995');
+  </script>
+</head>
+<body>
+
+
+  <!-- الصوت -->
+  <div class="audio-box">
+    <p><strong>Audio</strong></p>
+    <audio controls>
+      <source src="audio/m0.mp3" type="audio/mpeg">
+      متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+  </div>
+  <!-- فاصل بين الصوت والنص -->
+<hr style="margin:20px 0; border:1px solid #ccc;">
+<style>
+.dialog-box{
+    max-width:850px;
+    margin:30px auto;
+    background:#ffffff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    font-family:Arial, sans-serif;
+    line-height:1.9;
+}
+
+.dialog-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#2c3e50;
+    margin-bottom:20px;
+}
+
+.line{
+    margin:12px 0;
+    padding:12px 16px;
+    border-radius:10px;
+}
+
+.frau{
+    background:#f8f1ff;
+    border-left:5px solid #9b59b6;
+}
+
+.mann{
+    background:#eef7ff;
+    border-left:5px solid #3498db;
+}
+
+.speaker{
+    font-weight:bold;
+}
+
+.frau .speaker{
+    color:#8e44ad;
+}
+
+.mann .speaker{
+    color:#2980b9;
+}
+</style>
+
+<div class="dialog-box">
+
+<div class="dialog-title">German Dialogue</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Oh Gott! Was ist mit dir los? Bist du blind oder was?</div>
+
+<div class="line mann"><span class="speaker">Mann:</span> Oh, entschuldige. Alles in Ordnung?</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Warum läufst du wie 'n Irrer über die Straße, ohne dich vorher mal umzusehen?</div>
+
+<div class="line mann"><span class="speaker">Mann:</span> Ich habe doch geguckt! Ist wirklich alles in Ordnung?</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Ja, sieht so aus, hast du mal Glück gehabt. Und tschüss.</div>
+
+<div class="line mann"><span class="speaker">Mann:</span> Äh, warte mal kurz. Kann ich dir noch ganz schnell 'ne Frage stellen?</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Du traust dich ja was.</div>
+
+<div class="line mann"><span class="speaker">Mann:</span> Ich such den Fregattwagen. Ich komm irgendwie mit der Karte nicht klar.</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Hast du dich verirrt? Dann will ich mal nicht so sein. Also, ungefähr einen Kilometer geradeaus, zweimal links, einmal rechts, und dann bist du schon da.</div>
+
+<div class="line mann"><span class="speaker">Mann:</span> Zweimal links, einmal rechts. Alles klar, danke dir.</div>
+
+<div class="line frau"><span class="speaker">Frau:</span> Und nicht vergessen: Augen auf im Straßenverkehr.</div>
+
+</div>
+<style>
+.vocab-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin:25px 0;
+}
+
+.vocab-card{
+background:#fff;
+border-radius:14px;
+padding:18px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.25s;
+border:1px solid #eee;
+}
+
+.vocab-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.de{
+font-size:22px;
+font-weight:700;
+color:#1d3557;
+margin-bottom:8px;
+}
+
+.en{
+font-size:14px;
+color:#666;
+}
+
+.hint{
+text-align:center;
+font-size:13px;
+color:#888;
+margin-bottom:18px;
+}
+</style>
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('Oh Gott!')">
+<div class="de">Oh Gott!</div>
+<div class="en">Oh my God!</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Was ist mit dir los?')">
+<div class="de">Was ist mit dir los?</div>
+<div class="en">What's wrong with you?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('blind')">
+<div class="de">blind</div>
+<div class="en">blind</div>
+</div>
+
+<div class="vocab-card" onclick="speak('entschuldigen')">
+<div class="de">entschuldigen</div>
+<div class="en">to apologize</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Alles in Ordnung?')">
+<div class="de">Alles in Ordnung?</div>
+<div class="en">Everything okay?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('warum')">
+<div class="de">warum</div>
+<div class="en">why</div>
+</div>
+
+<div class="vocab-card" onclick="speak('laufen')">
+<div class="de">laufen</div>
+<div class="en">to walk / run</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Irre')">
+<div class="de">der Irre</div>
+<div class="en">crazy person</div>
+</div>
+
+<div class="vocab-card" onclick="speak('die Straße')">
+<div class="de">die Straße</div>
+<div class="en">street</div>
+</div>
+
+<div class="vocab-card" onclick="speak('sich umsehen')">
+<div class="de">sich umsehen</div>
+<div class="en">to look around</div>
+</div>
+
+</div>
+
+<script>
+function speak(text){
+speechSynthesis.cancel();
+const u=new SpeechSynthesisUtterance(text);
+u.lang='de-DE';
+u.rate=0.9;
+speechSynthesis.speak(u);
+}
+</script>
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('gucken')">
+<div class="de">gucken</div>
+<div class="en">to look</div>
+</div>
+
+<div class="vocab-card" onclick="speak('wirklich')">
+<div class="de">wirklich</div>
+<div class="en">really</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Glück haben')">
+<div class="de">Glück haben</div>
+<div class="en">to be lucky</div>
+</div>
+
+<div class="vocab-card" onclick="speak('warte mal')">
+<div class="de">warte mal</div>
+<div class="en">wait a moment</div>
+</div>
+
+<div class="vocab-card" onclick="speak('kurz')">
+<div class="de">kurz</div>
+<div class="en">briefly</div>
+</div>
+
+<div class="vocab-card" onclick="speak('die Frage')">
+<div class="de">die Frage</div>
+<div class="en">question</div>
+</div>
+
+<div class="vocab-card" onclick="speak('sich trauen')">
+<div class="de">sich trauen</div>
+<div class="en">to dare</div>
+</div>
+
+<div class="vocab-card" onclick="speak('suchen')">
+<div class="de">suchen</div>
+<div class="en">to look for</div>
+</div>
+
+<div class="vocab-card" onclick="speak('die Karte')">
+<div class="de">die Karte</div>
+<div class="en">map</div>
+</div>
+
+<div class="vocab-card" onclick="speak('nicht klarkommen mit')">
+<div class="de">nicht klarkommen mit</div>
+<div class="en">to have trouble with</div>
+</div>
+
+</div>
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('sich verirren')">
+<div class="de">sich verirren</div>
+<div class="en">to get lost</div>
+</div>
+
+<div class="vocab-card" onclick="speak('ungefähr')">
+<div class="de">ungefähr</div>
+<div class="en">approximately</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Kilometer')">
+<div class="de">der Kilometer</div>
+<div class="en">kilometer</div>
+</div>
+
+<div class="vocab-card" onclick="speak('geradeaus')">
+<div class="de">geradeaus</div>
+<div class="en">straight ahead</div>
+</div>
+
+<div class="vocab-card" onclick="speak('links')">
+<div class="de">links</div>
+<div class="en">left</div>
+</div>
+
+<div class="vocab-card" onclick="speak('rechts')">
+<div class="de">rechts</div>
+<div class="en">right</div>
+</div>
+
+<div class="vocab-card" onclick="speak('danke dir')">
+<div class="de">danke dir</div>
+<div class="en">thanks</div>
+</div>
+
+<div class="vocab-card" onclick="speak('nicht vergessen')">
+<div class="de">nicht vergessen</div>
+<div class="en">don't forget</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Augen auf!')">
+<div class="de">Augen auf!</div>
+<div class="en">Keep your eyes open! / Watch out!</div>
+</div>
+
+<div class="vocab-card" onclick="speak('der Straßenverkehr')">
+<div class="de">der Straßenverkehr</div>
+<div class="en">road traffic</div>
+</div>
+
+</div>
+<h2 style="text-align:center;margin:30px 0 20px;font-size:28px;">
+⭐ Useful German Phrases
+</h2>
+<div class="vocab-grid">
+
+<div class="vocab-card" onclick="speak('Was ist mit dir los?')">
+<div class="de">Was ist mit dir los?</div>
+<div class="en">What's wrong with you?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Alles in Ordnung?')">
+<div class="de">Alles in Ordnung?</div>
+<div class="en">Are you okay?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich habe doch geguckt!')">
+<div class="de">Ich habe doch geguckt!</div>
+<div class="en">But I did look!</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Hast du mal Glück gehabt.')">
+<div class="de">Hast du mal Glück gehabt.</div>
+<div class="en">You got lucky.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Kann ich dir eine Frage stellen?')">
+<div class="de">Kann ich dir eine Frage stellen?</div>
+<div class="en">Can I ask you a question?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich suche')">
+<div class="de">Ich suche …</div>
+<div class="en">I'm looking for…</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Ich komme mit der Karte nicht klar.')">
+<div class="de">Ich komme mit der Karte nicht klar.</div>
+<div class="en">I can't figure out the map.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Hast du dich verirrt?')">
+<div class="de">Hast du dich verirrt?</div>
+<div class="en">Are you lost?</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Geradeaus, zweimal links, einmal rechts.')">
+<div class="de">Geradeaus, zweimal links, einmal rechts.</div>
+<div class="en">Straight ahead, left twice, then right once.</div>
+</div>
+
+<div class="vocab-card" onclick="speak('Augen auf im Straßenverkehr!')">
+<div class="de">Augen auf im Straßenverkehr!</div>
+<div class="en">Keep your eyes open in traffic!</div>
+</div>
+
+</div>
+<style>
+.quiz-container{
+max-width:900px;
+margin:30px auto;
+font-family:Arial,sans-serif;
+}
+
+.quiz-card{
+background:#fff;
+border-radius:14px;
+padding:20px;
+margin-bottom:20px;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.question{
+font-size:20px;
+font-weight:bold;
+margin-bottom:15px;
+color:#1d3557;
+}
+
+.option{
+display:block;
+padding:12px;
+margin:8px 0;
+background:#f7f7f7;
+border-radius:10px;
+cursor:pointer;
+transition:.25s;
+border:2px solid transparent;
+}
+
+.option:hover{
+background:#eef5ff;
+}
+
+.correct{
+background:#d4edda!important;
+border-color:#28a745!important;
+color:#155724;
+font-weight:bold;
+}
+
+.wrong{
+background:#f8d7da!important;
+border-color:#dc3545!important;
+color:#721c24;
+}
+
+.disabled{
+pointer-events:none;
+}
+</style>
+
+<script>
+function checkAnswer(el,correct){
+let card=el.parentElement;
+if(card.classList.contains("disabled")) return;
+
+card.classList.add("disabled");
+
+let options=card.querySelectorAll(".option");
+
+options.forEach(function(op){
+if(op.dataset.correct=="true"){
+op.classList.add("correct");
+}
+});
+
+if(correct!="true"){
+el.classList.add("wrong");
+}
+}
+</script>
+
+<div class="quiz-container">
+
+<div class="quiz-card">
+<div class="question">1. Was bedeutet „blind“?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) müde</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) ohne Augenlicht</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) hungrig</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">2. Warum ist die Frau wütend?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) Der Mann kommt zu spät.</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Der Mann läuft ohne aufzupassen über die Straße.</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) Der Mann verliert seine Tasche.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">3. Ergänze den Satz:<br>„Alles ___ Ordnung?“</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) an</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) in</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) auf</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">4. Was sucht der Mann?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) den Bahnhof</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) den Fregattwagen</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) den Supermarkt</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">5. Was bedeutet „sich verirren“?</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">A) den Weg verlieren</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">B) schnell laufen</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) laut sprechen</div>
+</div>
+
+</div>
+<div class="quiz-container">
+
+<div class="quiz-card">
+<div class="question">6. Was antwortet die Frau auf „Alles in Ordnung?“</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) Nein, gar nicht.</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Ja, sieht so aus.</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) Ich weiß nicht.</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">7. Ergänze den Satz:<br>„Kann ich dir noch ganz schnell eine ___ stellen?“</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) Antwort</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Frage</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) Karte</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">8. Was bedeutet „geradeaus“?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) nach links</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">B) nach rechts</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">C) immer gerade</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">9. Wie kommt der Mann zum Ziel?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) einmal links, zweimal rechts</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) zweimal links, einmal rechts</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) dreimal rechts</div>
+</div>
+
+<div class="quiz-card">
+<div class="question">10. Was bedeutet „Augen auf im Straßenverkehr“?</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">A) Schlaf gut!</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">B) Pass im Straßenverkehr gut auf!</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">C) Schau nach oben!</div>
+</div>
+
+</div>
+<div class="quiz-card">
+<div class="question">12. Was bedeutet „Hast du dich verirrt?“</div>
+
+<div class="option" data-correct="true" onclick="checkAnswer(this,'true')">
+A) Are you lost?
+</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">
+B) Are you tired?
+</div>
+
+<div class="option" onclick="checkAnswer(this,'false')">
+C) Are you hungry?
+</div>
+
+</div>
+<style>
+.end-buttons{
+  max-width:900px;
+  margin:40px auto;
+  text-align:center;
+}
+
+.end-buttons button{
+  padding:12px 18px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.reset-btn{
+  background:#ef4444;
+  color:#fff;
+}
+
+.reset-btn:hover{
+  background:#dc2626;
+}
+
+.back-btn{
+  background:#2563eb;
+  color:#fff;
+}
+
+.back-btn:hover{
+  background:#1d4ed8;
+}
+</style>
+<div class="end-buttons">
+
+  <button class="reset-btn" onclick="location.reload()">
+    🔄 Lektion wiederholen
+  </button>
+
+ 
+
+</div>
+
+</body>
+</html>
+
